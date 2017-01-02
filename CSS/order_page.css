@@ -1,0 +1,100 @@
+form{
+	height: 100%;
+}
+form>span{
+	height: 20%;
+	display: block;
+	margin-left: 10%;
+}
+input[type=text], input[type=email]{
+  height:30%;
+  width: 50%;
+  border: 0;
+  box-shadow: -8px 10px 0px -7px #ebebeb, 8px 10px 0px -7px #ddd;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 1.5vw;
+  color: #00cc99;
+}
+input[type=text]:focus, input[type=email]:focus{
+  outline: none;
+  box-shadow: -8px 10px 0px -7px #00cc99, 8px 10px 0px -7px #00cc99;
+}
+input[type=radio]{
+	display: none;
+}
+input[type=submit]{
+	margin-top: 10px;
+	height: 70%;
+	max-height: 50%;
+	width: 20%;
+	max-width: 20%;
+	font-size: 1.3vw;
+	position: relative;
+	left: 70%;
+	transition: color 0.5s;
+	transition: background 0.5s;
+	border: none;
+	border-radius: 10%;
+	background-color: #1cb295;
+	color:white;
+}
+input[type=submit]:hover{
+	color: #00cc99;
+	background-color: #ddd;
+}
+input, select{
+	margin-left: 5%;
+}
+select{
+	font-size: 1.2vw;
+	color: #00cc99;
+	border: none;
+}
+option{
+
+}
+
+#content{
+	/*border:1px solid black;*/
+}
+.form_content{
+	display: inline-block;
+	width: 45%;
+	max-width: 45%;
+	height: 50%;
+	max-height: 50%;
+	position: relative;
+	top: 20%;
+}
+#account_subscription{
+	padding-left: 5%;
+}
+#account_desc{
+	text-align: center;
+	font-size: 2vw;
+	border-left: 3px #00cc99 dashed;
+}
+#account_desc>p{
+	margin-top: 10%;
+}
+p>span{
+	display: block;
+	margin-top: 3%;
+}
+span>label:not(.gender){
+	font-size: 2vw;
+}
+
+.gender{
+	font-size: 1.5vw;
+	margin-left: 3%;
+	transition: color 2s;
+	transition: background 1s;
+}
+
+.gender.active{
+	/*background-color: #00cc99;
+	color: white;*/
+	color: #00cc99;
+}

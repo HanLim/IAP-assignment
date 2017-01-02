@@ -1,0 +1,131 @@
+.content-slide{
+	width: 100%;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+#content1{
+	transition: opacity 1s; 
+}
+#content1>p{
+	font-size: 2vw;
+	position: relative;
+	top: 20%;
+    opacity: 0;
+    transition: opacity 1s; 
+}
+#content1>img{
+	display: block;
+    max-width: 30%;
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s; 
+}
+#content2{
+	display: none;
+	transition: opacity 1s; 
+	height: 100%;
+}
+#content2>p, #content2>img{
+	display: inline-block;
+	opacity: 0;
+	transition: opacity 1s; 
+}
+#content2>p{
+	font-size: 2vw;
+	word-wrap: break-word;
+	width: 30%;
+	max-width: 30%;
+	position: relative;
+	top: 25%;
+	left: 5%;
+}
+#content2>p:nth-of-type(2){
+	top: 27%;
+	left: 35%;
+}
+#content2>img{
+	max-width: 30%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1s; 
+    top: 10%;
+    left: 50%;
+}
+#content3{
+	display: none;
+	transition: opacity 1s; 
+}
+#content3>img, #content3>p{
+	display: inline-block;
+	transition: opacity 1s; 
+	position: absolute;
+	opacity: 0;
+}
+#content3>img{
+	max-width: 30%;
+	top: 20%;
+}
+#content3>img:nth-of-type(1){
+	top: 20%;
+	left: 3%;
+}
+#content3>img:nth-of-type(2){
+	max-height: 40%; 
+	top: 20%;
+	right: 3%;
+}
+#content3>p{
+	font-size: 2vw;
+	top: 30%;
+	transition: opacity 1s; 
+	bottom: 0;
+    left: 48%;
+    transform: translateX(-50%);
+}
+
+#content1.fade{
+	opacity: 0;
+}
+#content2.fade{
+	opacity: 0;
+}
+#content3.fade{
+	opacity: 0;
+}
+
+#choose-slide{
+	position: relative;
+	bottom: 10%;
+	z-index: 10;
+	display: table;
+    margin: 0 0; 
+    width: 100%;
+    text-align: center;
+}
+
+input[type="radio"]{
+	display: none;
+}
+
+#choose-slide>label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	margin: 1%;
+	font-size: 13px;
+	width: 1%;
+	max-width: 1%;
+	max-height: 40%;
+	height: 40%;
+	background-color: #aaa;
+	border-radius: 50%;
+	transition: background 1s; 
+}
+
+
