@@ -30,4 +30,7 @@ video{
 .toggle{
     font-weight: bold;
     cursor: pointer;
+    background-color: #ddd;
+    height: 15%;
+    width: 15%;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-	<html>
+	<html id = "html">
 	<head>
 		<title>Order</title>
 		<link rel="stylesheet" type="text/css" href="../CSS/template.css">
@@ -10,46 +10,48 @@
 
 	</head>
 	<body>
-		<div id="header"></div>
-		<div id="nav"></div>
-		<div id="content" class="content-ads">
-			<div class="form_content" id="account_subscription">
-				<form name="orderForm" onsubmit="return validateForm(event)">
-					<span>
-						<label>Name: </label>
-						<input id="name" type="text" name="name">
-					</span>
-					<span>
-						<label>Gender: </label>
-						<label class="gender" for="male" onclick="color(this)" id="maleLabel">Male</label>
-						<input type="radio" name="gender" value="male" id="male">
-						<label class="gender" for="female" onclick="color(this)" id="femaleLabel">Female</label>
-						<input type="radio" name="gender" value="female" id="female">
-					</span>
-					<span>
-						<label>Email: </label>
-						<input id="email" type="email" name="gender" placeholder="example@example.com">
-					</span>
-					<span>
-						<label>Subscription Type: </label>
-						<select name="type">
-						  <option value="trial">1 month trial Plan</option>
-						  <option value="premium">Premium Plan</option>
-						</select>
-					</span>
-					<span>
-						<input type="submit" name="SUBMIT" id="submit">
-					</span>
-				</form>
+		<div id="normal-content">
+			<div id="header"></div>
+			<div id="nav"></div>
+			<div id="content" class="content-ads">
+				<div class="form_content" id="account_subscription">
+					<form name="orderForm" onsubmit="return validateForm(event)">
+						<span>
+							<label>Name: </label>
+							<input id="name" type="text" name="name">
+						</span>
+						<span>
+							<label>Gender: </label>
+							<label class="gender" for="male" onclick="color(this)" id="maleLabel">Male</label>
+							<input type="radio" name="gender" value="male" id="male">
+							<label class="gender" for="female" onclick="color(this)" id="femaleLabel">Female</label>
+							<input type="radio" name="gender" value="female" id="female">
+						</span>
+						<span>
+							<label>Email: </label>
+							<input id="email" type="email" name="gender" placeholder="example@example.com">
+						</span>
+						<span>
+							<label>Subscription Type: </label>
+							<select name="type">
+							  <option value="trial">1 month trial Plan</option>
+							  <option value="premium">Premium Plan</option>
+							</select>
+						</span>
+						<span>
+							<input type="submit" name="SUBMIT" id="submit">
+						</span>
+					</form>
+				</div>
+				<div class="form_content" id="account_desc">
+					<p>Get unlimited downloads with premium account.<span></span>
+					Or 1 month trial to enjoy the previlegde of premium account.</p>
+				</div>
 			</div>
-			<div class="form_content" id="account_desc">
-				<p>Unlimited download with premium account.<span></span>
-				Or 1 month trial to enjoy the previlegde of premium account.</p>
-			</div>
+			<div id="ads" class="content-ads" onclick="hideAds()"></div>
+			<div id="show" onclick="showAds()"></div>
+			<div id="footer" onclick='hideFooter(this)'></div>
+			<div id="show-footer" onclick="showFooter(this)"></div>
 		</div>
-		<div id="ads" class="content-ads" onclick="hideAds()"></div>
-		<div id="show" onclick="showAds()"></div>
-		<div id="footer" onclick='hideFooter(this)'></div>
-		<div id="show-footer" onclick="showFooter(this)"></div>
 	</body>
 </html>

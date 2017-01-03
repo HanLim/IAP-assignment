@@ -2,6 +2,9 @@ window.onload = function(){
     initialize();
     setActiveNav(3);
     modVid();
+    detectOrientation();
+    forceLandscape();
+    detectScreenResize();
 }
 
 function modVid(){

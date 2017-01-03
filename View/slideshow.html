@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-	<html>
+	<html id = "html">
 	<head>
 		<title>Slide show</title>
 		<link rel="stylesheet" type="text/css" href="../CSS/template.css">
@@ -10,37 +10,36 @@
 
 	</head>
 	<body>
-		<div id="header"></div>
-		<div id="nav"></div>
-		<div id="content" class="content-ads">
-			<p id="slideshow-header">Featured App Demos</p>
-			<div class="video-tabs" id="vid1" >
-				<p>Clash of Clans</p>
-				<span class="toggle"><</span>
-				<video onclick="playPause(this)"> <!-- autoplay="autoplay" -->
-					<source src="../Vid/coc.mp4" type="video/mp4">
-				</video>	
-				<span class="toggle">></span>
+		<div id="normal-content">
+			<div id="header"></div>
+			<div id="nav"></div>
+			<div id="content" class="content-ads">
+				<p id="slideshow-header">Featured App Demos</p>
+				<div class="video-tabs" id="vid1" >
+					<p>Clash of Clans</p>
+					<span class="toggle"><</span>
+					<video onclick="playPause(this)"> <!-- autoplay="autoplay" -->
+						<source src="../Vid/coc.mp4" type="video/mp4">
+					</video>	
+					<span class="toggle">></span>
+				</div>
+				<div class="video-tabs" id="vid2">
+					<p>Clash Royale</p>
+					<video controls="controls">
+						<source src="../Vid/cr.mp4" type="video/mp4">
+					</video>	
+				</div>
+				<div class="video-tabs" id="vid3">
+					<p>Pokemon Go</p>
+					<video controls="controls">
+						<source src="../Vid/pkmnGo.mp4" type="video/mp4">
+					</video>	
+				</div>
 			</div>
-			<div class="video-tabs" id="vid2">
-				<p>Clash Royale</p>
-				<video controls="controls">
-					<source src="../Vid/cr.mp4" type="video/mp4">
-				</video>	
-			</div>
-			<div class="video-tabs" id="vid3">
-				<p>Pokemon Go</p>
-				<video controls="controls">
-					<source src="../Vid/pkmnGo.mp4" type="video/mp4">
-				</video>	
-			</div>
+			<div id="ads" class="content-ads" onclick="hideAds()"></div>
+			<div id="show" onclick="showAds()"></div>
+			<div id="footer" onclick='hideFooter(this)'></div>
+			<div id="show-footer" onclick="showFooter(this)"></div>
 		</div>
-		<div id="ads" class="content-ads" onclick="hideAds()"></div>
-		<div id="show" onclick="showAds()"></div>
-		<div id="footer" onclick='hideFooter(this)'></div>
-		<div id="show-footer" onclick="showFooter(this)"></div>
 	</body>
 </html>
-<script type="text/javascript">
-	
-</script>

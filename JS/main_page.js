@@ -5,7 +5,9 @@ window.onload = function(){
 	previousSlide = document.getElementById('content1');
 	document.getElementsByTagName("label")[0].style.background = "green";
 	slide1();
-forceLandscape();
+	detectOrientation();
+	forceLandscape();
+	detectScreenResize();
 }
 
 function slide1(){

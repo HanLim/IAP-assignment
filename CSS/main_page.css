@@ -3,16 +3,26 @@
 	display: inline-block;
 	height: 100%;
 	position: relative;
+
+}
+.content-slide>p{
+	border: 0.5vw solid #ddd;
+	border-radius: 2vw;
+	padding: 0.5vw;
 }
 #content1{
-	transition: opacity 1s; 
+	transition: opacity 1s ease-in-out;
 }
 #content1>p{
+	left: 60%;
+	transform: translateX(-70%);
 	font-size: 2vw;
 	position: relative;
 	top: 20%;
     opacity: 0;
-    transition: opacity 1s; 
+    width: 50%;
+    transition: opacity 1s ease-in-out; 
+    background-color: rgba(221,221,221, 0.15);
 }
 #content1>img{
 	display: block;
@@ -23,17 +33,17 @@
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    transition: opacity 1s; 
+    transition: opacity 1s ease-in-out; 
 }
 #content2{
 	display: none;
-	transition: opacity 1s; 
+	transition: opacity 1s ease-in-out; 
 	height: 100%;
 }
 #content2>p, #content2>img{
 	display: inline-block;
 	opacity: 0;
-	transition: opacity 1s; 
+	transition: opacity 1s ease-in-out; 
 }
 #content2>p{
 	font-size: 2vw;
@@ -43,6 +53,7 @@
 	position: relative;
 	top: 25%;
 	left: 5%;
+	background-color: rgba(221,221,221, 0.15);
 }
 #content2>p:nth-of-type(2){
 	top: 27%;
@@ -53,7 +64,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    transition: opacity 1s; 
+    transition: opacity 1s ease-in-out; 
     top: 10%;
     left: 50%;
 }
@@ -63,7 +74,7 @@
 }
 #content3>img, #content3>p{
 	display: inline-block;
-	transition: opacity 1s; 
+	transition: opacity 1s ease-in-out; 
 	position: absolute;
 	opacity: 0;
 }
@@ -72,6 +83,7 @@
 	top: 20%;
 }
 #content3>img:nth-of-type(1){
+	max-height: 40%; 
 	top: 20%;
 	left: 3%;
 }
@@ -81,12 +93,14 @@
 	right: 3%;
 }
 #content3>p{
+	background-color: rgba(221,221,221, 0.15);
 	font-size: 2vw;
 	top: 30%;
-	transition: opacity 1s; 
+	transition: opacity 1s ease-in-out; 
 	bottom: 0;
     left: 48%;
     transform: translateX(-50%);
+    height: 5%;
 }
 
 #content1.fade{
@@ -117,15 +131,12 @@ input[type="radio"]{
 	display: inline-block;
 	cursor: pointer;
 	position: relative;
-	margin: 1%;
-	font-size: 13px;
+	margin: 1% 1% 1% 1%;
 	width: 1%;
-	max-width: 1%;
-	max-height: 40%;
 	height: 40%;
 	background-color: #aaa;
 	border-radius: 50%;
-	transition: background 1s; 
+	transition: background 1s ease-in-out; 
 }
 
 

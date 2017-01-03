@@ -62,9 +62,7 @@ function showFooter(show){
 	var footer = document.getElementById('footer');
 	footer.style.opacity = '0';
 	footer.style.display = 'block';
-	setTimeout(function(){	
-		show.style.opacity = '0';
-	}, 500);
+	show.style.opacity = '0';
 	setTimeout(function(){	
 		show.style.display = 'none';
 	}, 500);
@@ -78,9 +76,7 @@ function hideFooter(hide){
 	var showfooter = document.getElementById('show-footer');
 	showfooter.style.opacity = '0';
 	showfooter.style.display = 'block';
-	setTimeout(function(){
-		hide.style.opacity = '0';
-	}, 500);
+	hide.style.opacity = '0';
 	setTimeout(function(){
 		hide.style.display = 'none';
 	}, 500);
@@ -152,12 +148,47 @@ function initialize(){
 	toggleSpin();
 	changeAds();
 }
+function detectOrientation(){
+	window.addEventListener("orientationchange", function() {
+		forceLandscape();
+	}, false);
+}
+
+function detectScreenResize(){
+	if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		setTimeout(function(){
+			if(window.innerWidth < window.innerHeight){
+				document.getElementById('html').style.width = "1024px";
+				document.getElementById('html').style.height = "768px";
+				document.getElementById('show-footer').style.position = "relative";
+				document.getElementById('show-footer').style.top = "-6.15%";
+				document.getElementById('footer').style.position = "relative";
+
+			}
+			else{
+				document.getElementById('html').style.width = "100%";
+				document.getElementById('html').style.height = "100%";
+			}
+		}, 1);
+		window.addEventListener('resize', function () { 
+		    "use strict";
+		    window.location.reload(); 
+		});
+	}
+}
 
 function forceLandscape(){
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- 		if(screen.orientation.angle != '90' || screen.orientation.angle != '-90'){
+ 		if(screen.orientation.angle == '0'){
  			setTimeout(function(){
- 				document.getElementById('body').style.opacity = '0';
+ 				document.getElementById('normal-content').style.display = 'none';
+ 				document.getElementById('warning').style.display = 'block';
+ 			},1);
+ 		}
+ 		else{
+ 			setTimeout(function(){
+ 				document.getElementById('normal-content').style.display = 'block';
+ 				document.getElementById('warning').style.display = 'none';
  			},1);
  		}
 	}

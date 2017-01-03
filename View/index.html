@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-	<html>
+	<html id = "html">
 	<head>
 		<title>Home</title>
 		<link rel="stylesheet" type="text/css" href="../CSS/template.css">
@@ -9,36 +9,39 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 	</head>
-	<body id="body">
-		<div id="header"></div>
-		<div id="nav"></div>
-		<div id="content" class="content-ads">
-			<div id="content1" class="content-slide">
-				<p align="center" id="p1">Providing you the best Android Applications in market.</p>
-				<img id="img1" src="../Img/android_footer.png">
+	<body>
+		<div id="normal-content">
+			<div id="header"></div>
+			<div id="nav"></div>
+			<div id="content" class="content-ads">
+				<div id="content1" class="content-slide">
+					<p align="center" id="p1">Providing you the best Android Applications in market.</p>
+					<img id="img1" src="../Img/android_footer.png">
+				</div>
+				<div id="content2" class="content-slide fade">
+					<p align="center" class="slide2_p">Applications are all up-to-date.</p>
+					<img id="img2" src="../Img/android_app.png" >
+					<p align="center" class="slide2_p">And you can find all genre of Applications.</p>
+				</div>
+				<div id="content3" class="content-slide fade">
+					<img class="slide3_img" src="../Img/android_phone.png">
+					<p id="p3">Subscribe to download Application without limitation.</p>
+					<img class="slide3_img" src="../Img/android_controller.png">
+				</div>
+				<div id="choose-slide">
+					<input id="slide1" type="radio" name="slides" checked onclick="changeSlide(this)">
+					<label for="slide1"></label>
+					<input id="slide2" type="radio" name="slides" onclick="changeSlide(this)">
+					<label for="slide2"></label>
+					<input id="slide3" type="radio" name="slides" onclick="changeSlide(this)">
+					<label for="slide3"></label>
+				</div>
 			</div>
-			<div id="content2" class="content-slide fade">
-				<p align="center" class="slide2_p">Applications are all up-to-date.</p>
-				<img id="img2" src="../Img/android_app.png" >
-				<p align="center" class="slide2_p">And you can find all genre of Applications.</p>
-			</div>
-			<div id="content3" class="content-slide fade">
-				<img class="slide3_img" src="../Img/android_phone.png">
-				<p id="p3">Subscribe to download Application without limitation.</p>
-				<img class="slide3_img" src="../Img/android_controller.png">
-			</div>
-			<div id="choose-slide">
-				<input id="slide1" type="radio" name="slides" checked onclick="changeSlide(this)">
-				<label for="slide1"></label>
-				<input id="slide2" type="radio" name="slides" onclick="changeSlide(this)">
-				<label for="slide2"></label>
-				<input id="slide3" type="radio" name="slides" onclick="changeSlide(this)">
-				<label for="slide3"></label>
-			</div>
+			<div id="ads" class="content-ads" onclick="hideAds()"></div>
+			<div id="show" onclick="showAds()"></div>
+			<div id="footer" onclick='hideFooter(this)'></div>
+			<div id="show-footer" onclick="showFooter(this)"></div>
 		</div>
-		<div id="ads" class="content-ads" onclick="hideAds()"></div>
-		<div id="show" onclick="showAds()"></div>
-		<div id="footer" onclick='hideFooter(this)'></div>
-		<div id="show-footer" onclick="showFooter(this)"></div>
 	</body>
+	<div id="warning">Please rotate your phone in order to view the website.</div>
 </html>
