@@ -14,7 +14,6 @@ input[type=text], input[type=email]{
   width: 50%;
   border: 0;
   box-shadow: -8px 10px 0px -7px #ebebeb, 8px 10px 0px -7px #ddd;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
   font-size: 1.5vw;
   color: #00cc99;
@@ -35,8 +34,7 @@ input[type=submit]{
 	font-size: 1.3vw;
 	position: relative;
 	left: 70%;
-	transition: color 0.5s ease-in-out;
-	transition: background 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
 	border: none;
 	border-radius: 10%;
 	background-color: #1cb295;
@@ -55,10 +53,6 @@ select{
 	border: none;
 	border-radius: 1vw;
 	background-color: #ddd;
-}
-
-#content{
-	/*border:1px solid black;*/
 }
 .form_content{
 	display: inline-block;
@@ -91,12 +85,9 @@ span>label:not(.gender){
 .gender{
 	font-size: 1.5vw;
 	margin-left: 3%;
-	transition: color 2s ease-in-out;
-	transition: background 1s ease-in-out;
+	transition: color 2s ease-in-out, background 1s ease-in-out;
 }
 
 .gender.active{
-	/*background-color: #00cc99;
-	color: white;*/
 	color: #00cc99;
 }

@@ -14,8 +14,8 @@ function spin(reverse){
 			}		
 	}, 30);
 }
-var reverse = false;
 function toggleSpin(){
+	var reverse = false;
 	setInterval(
 		function(){
 			spin(reverse);

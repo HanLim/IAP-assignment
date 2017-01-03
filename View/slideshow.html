@@ -14,26 +14,30 @@
 			<div id="header"></div>
 			<div id="nav"></div>
 			<div id="content" class="content-ads">
-				<p id="slideshow-header">Featured App Demos</p>
+				<p id="slideshow-header">Featured App Trailer</p>
 				<div class="video-tabs" id="vid1" >
 					<p>Clash of Clans</p>
-					<span class="toggle"><</span>
-					<video onclick="playPause(this)"> <!-- autoplay="autoplay" -->
+					<span class="toggle" onclick="changeVid(3)"><</span>
+					<video onclick="playPause(this)" id="cocVid" onended="changeVid(2)">
 						<source src="../Vid/coc.mp4" type="video/mp4">
 					</video>	
-					<span class="toggle">></span>
+					<span class="toggle" onclick="changeVid(2)">></span>
 				</div>
 				<div class="video-tabs" id="vid2">
 					<p>Clash Royale</p>
-					<video controls="controls">
+					<span class="toggle" onclick="changeVid(1)"><</span>
+					<video onclick="playPause(this)" id="crVid" onended="changeVid(3)">
 						<source src="../Vid/cr.mp4" type="video/mp4">
-					</video>	
+					</video>
+					<span class="toggle" onclick="changeVid(3)">></span>	
 				</div>
 				<div class="video-tabs" id="vid3">
 					<p>Pokemon Go</p>
-					<video controls="controls">
+					<span class="toggle" onclick="changeVid(2)"><</span>
+					<video onclick="playPause(this)" id="pkmnVid" onended="changeVid(1)">
 						<source src="../Vid/pkmnGo.mp4" type="video/mp4">
-					</video>	
+					</video>
+					<span class="toggle" onclick="changeVid(1)">></span>	
 				</div>
 			</div>
 			<div id="ads" class="content-ads" onclick="hideAds()"></div>

@@ -9,9 +9,6 @@ html{
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
-body{
-	/*background-color: rgba(255,255,255,0.1);*/
-}
 div{
 	vertical-align: top;
 }
@@ -69,26 +66,22 @@ a{
 	height: 5%;
 }
 .nav-tabs{
-	/*padding-top: 0.5%;*/
 	height: 100%;
 	display: inline-block;
 	width: 16.66%;
 	text-align: center;
 	font-size: 1.5vw;
 	cursor: pointer;
-	/*background-color: white;*/
-	transition: background .25s ease-in-out;
-	transition: color .5s ease-in-out;
+	transition: background .25s ease-in-out, color .5s ease-in-out;
 }
 .nav-tabs.active{
 	color: #00cc99;
 	background-color: rgba(221, 221, 221, 1);
-	transition: background .25s ease-in-out;
-	transition: color .5s ease-in-out;
+	transition: background .25s ease-in-out, color .5s ease-in-out;
 }
 .nav-tabs:hover{
 	background-color: #00cc99;
-	color: green;
+	color: white;
 }
 /*content*/
 #content{
@@ -97,7 +90,6 @@ a{
 	height: 80%;
 	transition: width .5s ease-in-out;
 	background-color: rgba(221,221,221, 0.15);
-	/*background-color: rgba(0, 204, 153, 0.5);*/
 }
 
 /*ads*/
