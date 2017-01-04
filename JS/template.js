@@ -56,6 +56,7 @@ function loadTemplate(){
 	$('#show').load('Template/show-sidebar.html');
 	$('#footer').load('Template/footer.html');
 	$('#show-footer').load('Template/show-footer.html');
+	$('#warning').load('Template/warning.html');
 }
 
 function showFooter(show){

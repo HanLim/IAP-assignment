@@ -1,0 +1,32 @@
+#data{
+	height: 80%;
+	width: 100%;
+}
+#content{
+	text-align: center;
+
+}
+table{
+	height: 70%;
+	width: 80%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 1vw;
+	border: none;
+}
+#content>a{
+	font-size: 1.5vw;
+}
+th{
+	background-color: #ddd;
+	font-size: 1.5vw;
+	color: black;
+	border-radius: 1vw;
+}
+td{
+	background-color: rgba(211,211,211,0.5);
+	font-size: 1.5vw;
+	color: black;
+	border-radius: 1vw;
+}

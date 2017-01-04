@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html id = "html">
+    <head>
+        <title>XML description</title>
+        <link rel="stylesheet" type="text/css" href="../CSS/template.css">
+        <link rel="stylesheet" type="text/css" href="../CSS/xmlPage.css">
+        <script type="text/javascript" src="../JS/template.js"></script>
+        <script type="text/javascript" src="../JS/xmlPage.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    </head>
+    <body onload="displayResult();">
+        <div id="normal-content">
+            <div id="header"></div>
+            <div id="nav"></div>
+            <div id="content" class="content-ads">
+                <div id="data"></div>
+                <a href="../XML/xmlPage.xml">Click here to view the raw XML page.</a>
+            </div>
+            <div id="ads" class="content-ads" onclick="hideAds()"></div>
+            <div id="show" onclick="showAds()"></div>
+            <div id="footer" onclick='hideFooter(this)'></div>
+            <div id="show-footer" onclick="showFooter(this)"></div>
+        </div>
+        <div id="warning"></div>
+    </body>
+</html>
