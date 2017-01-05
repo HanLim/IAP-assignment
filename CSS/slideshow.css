@@ -45,7 +45,7 @@ video, .toggle{
 }
 .toggle:hover{
     background-color: #ddd;
-    border-radius: 1vw;
+    border-radius: 0.2vw;
 }
 video{
     width: 40%;

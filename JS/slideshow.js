@@ -2,9 +2,6 @@ window.onload = function(){
     initialize();
     setActiveNav(3);
     modVid();
-    detectOrientation();
-    forceLandscape();
-    detectScreenResize();
     setTimeout(function(){
         changeVid(1);
     }, 1);
@@ -18,7 +15,7 @@ function modVid(){
         $('video').mouseleave(function(){
             this.removeAttribute("controls");
         });
-    }, 500);
+    }, 1);
 }
 
 function playPause(vid){

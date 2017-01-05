@@ -1,9 +1,6 @@
 window.onload = function(){
 	initialize();
 	setActiveNav(2);
-	detectOrientation();
-	forceLandscape();
-	detectScreenResize();
 }
 
 function validateForm(){

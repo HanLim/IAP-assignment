@@ -52,7 +52,7 @@
 	max-width: 30%;
 	position: relative;
 	top: 25%;
-	left: 5%;
+	left: 3%;
 	background-color: rgba(221,221,221, 0.15);
 }
 #content2>p:nth-of-type(2){
@@ -94,7 +94,7 @@
 }
 #content3>p{
 	background-color: rgba(221,221,221, 0.15);
-	font-size: 2vw;
+	font-size: 1.5vw;
 	top: 30%;
 	transition: opacity 1s ease-in-out; 
 	bottom: 0;
@@ -135,8 +135,9 @@ input[type="radio"]{
 	width: 1%;
 	height: 40%;
 	background-color: #aaa;
-	border-radius: 50%;
+	border-radius: 1vw;
 	transition: background 1s ease-in-out; 
+	border: 0.3vw solid #ddd;
 }
 
 

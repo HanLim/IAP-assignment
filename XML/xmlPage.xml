@@ -7,34 +7,58 @@
         <category>Adventure</category>
     </app>
     <app>
+        <name>Pokemon GO</name>
+        <publisher>Niantic Inc.</publisher>
+        <rating>4.0</rating>
+        <category>Adventure</category>
+    </app>
+    <app>
+        <name>Growtopia</name>
+        <publisher>Robinson Technologies</publisher>
+        <rating>4.1</rating>
+        <category>Adventure</category>
+    </app>
+    <app>
+        <name>Roblox</name>
+        <publisher>Roblox Corporation</publisher>
+        <rating>4.3</rating>
+        <category>Adventure</category>
+    </app>
+    <app>
         <name>Facebook</name>
         <publisher>Facebook</publisher>
         <rating>4.0</rating>
-        <category>Social</category>
+        <category>Social and Communication</category>
     </app>
     <app>
         <name>Whatsapp</name>
         <publisher>Whatsapp Inc.</publisher>
-        <category>Communication</category>
         <rating>4.4</rating>
+        <category>Social and Communication</category>
+    </app>
+    <app>
+        <name>Instagram</name>
+        <publisher>Instagram</publisher>
+        <rating>4.5</rating>
+        <category>Social and Communication</category>
     </app>
     <app>
         <name>Clash Royale</name>
         <publisher>Supercell</publisher>
-        <category>Strategy</category>
         <rating>4.5</rating>
+        <category>Strategy</category>
     </app>
     <app>
         <name>Clash of Clans</name>
         <publisher>Supercell</publisher>
-        <category>Strategy</category>
         <rating>4.6</rating>
+        <category>Strategy</category>
     </app>
     <app>
-        <name>Pokemon GO</name>
-        <publisher>Niantic Inc.</publisher>
-        <category>Adventure</category>
-        <rating>4.0</rating>
-    </app>
+        <name>Plant vs. Zombie</name>
+        <publisher>Electronic Arts</publisher>
+        <rating>4.4</rating>
+        <category>Strategy</category>
+    </app>    
 </catalog>
 

@@ -3,7 +3,7 @@ window.onload = function(){
 	initialize();
 	setActiveNav(0);	
 	previousSlide = document.getElementById('content1');
-	document.getElementsByTagName("label")[0].style.background = "green";
+	document.getElementsByTagName("label")[0].style.background = "#00cc99";
 	slide1();
 	detectOrientation();
 	forceLandscape();
@@ -71,7 +71,7 @@ function changeSlide(slideNo){
 		for(var a = 0; a < 3; a++){
 			color = document.getElementsByTagName("label")[a];
 			if(a == currentSlideNo - 1){
-				color.style.background = "green";
+				color.style.background = "#00cc99";
 			}
 			else{
 				color.style.background = "#aaa";

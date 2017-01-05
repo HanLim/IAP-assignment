@@ -1,11 +1,17 @@
+::-webkit-scrollbar{
+	display: none;
+	opacity: 0;
+}
 body, html{
 	margin: 0;
 	height: 100%;
 	width: 100%;
 	color: white;
+	text-shadow: 1% 1% #aaa;
+	font-family: Copperplate,"Copperplate Gothic Light",fantasy;
 }
 html{
-	background-image: url('../Img/bg4.jpg');
+	background-image: url('../Img/bg2.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
@@ -58,6 +64,7 @@ a{
 .headerElement{
 	align-items: stretch;
 	display: inline-block;
+	cursor: pointer;
 }
 
 /*navigation*/
@@ -78,10 +85,14 @@ a{
 	color: #00cc99;
 	background-color: rgba(221, 221, 221, 1);
 	transition: background .25s ease-in-out, color .5s ease-in-out;
+	border-bottom: 0.3vw solid #00cc99;
+	box-sizing: border-box;
 }
 .nav-tabs:hover{
 	background-color: #00cc99;
 	color: white;
+	box-sizing: border-box;
+	border-bottom: 0.3vw solid #ddd;
 }
 /*content*/
 #content{
@@ -89,7 +100,7 @@ a{
 	vertical-align: top;
 	height: 80%;
 	transition: width .5s ease-in-out;
-	background-color: rgba(221,221,221, 0.15);
+	background-color: rgba(221,221,221, 0.5);
 }
 
 /*ads*/
@@ -172,6 +183,39 @@ a{
 	transition: opacity 1s;
 	z-index: 10;
 	cursor: pointer;
-	font-size: 1.1vw;
+	font-size: 1vw;
 	font-weight: bold;
 }
+#show-footer>p{
+	position: relative;
+	top: -15%;
+}
+.footer-content{
+	display: inline-block;
+	width: 49%;
+}
+
+.footer-content:nth-of-type(1){
+	position: relative;
+	top: 40%;
+}
+.footer-content:nth-of-type(2){
+	border-left: 0.2vw dotted #ddd;
+	height: 100%;
+}
+.footer-content>img{
+	width: 6%;
+	transition: width 0.25s ease-in-out;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.footer-content>img:hover{
+	width: 7%;
+}
+.footer-content>p{
+	margin: 1.5%;
+}
+.footer-content>p:nth-of-type(3), .footer-content>img{
+	display: inline-block;
+}
+

@@ -32,7 +32,4 @@ function displayResult(){
 window.onload = function(){
     initialize();
     setActiveNav(1);    
-    detectOrientation();
-    forceLandscape();
-    detectScreenResize();
 }

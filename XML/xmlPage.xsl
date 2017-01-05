@@ -3,7 +3,7 @@
 <xsl:template match="/">
 <html> 
 <body>
-  <h2>My CD Collection</h2>
+  <h2>Application Data</h2>
   <table border="1">
     <tr>
       <th>App Name</th>

@@ -10,17 +10,25 @@ function spin(reverse){
 				else{
 					logo.style.transform = "rotate(-"+deg+"deg)";
 				}
-				deg += 10;
+				deg += 30;
 			}		
 	}, 30);
 }
 function toggleSpin(){
-	var reverse = false;
-	setInterval(
-		function(){
-			spin(reverse);
-			reverse = !reverse;
-		}, 5000);
+	// var reverse = false;
+	// setInterval(
+	// 	function(){
+	// 		spin(reverse);
+	// 		reverse = !reverse;
+	// 	}, 5000);
+	setTimeout(function(){
+        $('#logo').mouseenter(function(){
+            spin(false);
+        });
+        $('#logo').mouseleave(function(){
+            spin(true);
+        });
+    }, 1);
 }
 function hideAds(){
 	var ads = document.getElementById('ads'),
@@ -148,7 +156,32 @@ function initialize(){
 	loadTemplate();
 	toggleSpin();
 	changeAds();
+	detectOrientation();
+	detectScreenResize();
+	forceLandscape();
+	redirect();
 }
+
+function redirect(){
+	setTimeout(function(){
+		$('#logo').click(function(){
+			window.location.replace("index.html")
+		});
+		$('#companyName').click(function(){
+			window.location.replace("index.html")
+		});
+		$('#fbFooter').click(function(){
+			window.location.replace("http://facebook.com")
+		});
+		$('#twitterFooter').click(function(){
+			window.location.replace("http://twitter.com")
+		});
+		$('#gplusFooter').click(function(){
+			window.location.replace("http://plus.google.com")
+		});
+	},1);
+}
+
 function detectOrientation(){
 	window.addEventListener("orientationchange", function() {
 		forceLandscape();
