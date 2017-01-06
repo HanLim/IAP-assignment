@@ -100,7 +100,7 @@
 	bottom: 0;
     left: 48%;
     transform: translateX(-50%);
-    height: 5%;
+    text-align: center;
 }
 
 #content1.fade{
@@ -127,7 +127,7 @@ input[type="radio"]{
 	display: none;
 }
 
-#choose-slide>label {
+.toggleSlideButtons {
 	display: inline-block;
 	cursor: pointer;
 	position: relative;
@@ -136,8 +136,12 @@ input[type="radio"]{
 	height: 40%;
 	background-color: #aaa;
 	border-radius: 1vw;
-	transition: background 1s ease-in-out; 
-	border: 0.3vw solid #ddd;
+	transition: background 0.5s ease-in-out; 
+	border: 0.3vw solid black;
 }
-
-
+.toggleSlideButtons:hover{
+	background-color: yellow;
+}
+#p3{
+	height: 10%;
+}

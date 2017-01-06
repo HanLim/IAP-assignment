@@ -9,6 +9,10 @@
     border-radius: 1vw;
     background: #ddd;
 }
+#chooseApps::-webkit-scrollbar{
+	display: none;
+	opacity: 0;
+}
 #content{
 	background-color: initial;
 }
@@ -53,14 +57,11 @@
 	box-sizing: border-box;
 	border-bottom: 0.3vw solid #ddd;
 }
-
-#checkout{
-	display: none;
-}
 #chooseApps{
 	width: 100%;
 	height: 95%;
 	overflow-y: scroll;
+	display: none;
 }
 .categories{
 	height: 30%;
@@ -68,7 +69,7 @@
 }
 .categories>div{
 	width: calc(100%/3);
-	height: 90%;
+	height: 80%;
 	display: inline-block;
 	box-sizing: border-box;
 	border: 2px solid #ddd;
@@ -76,7 +77,9 @@
 	background-color: rgba(221,221,221, 0.7);
 }
 .categories>p{
-	height: 5%;
+	height: 10%;
+	font-size: 1.5vw;
+	width: calc(100%/3);
 }
 .apps>img, .appDesc, .addToCart{
 	display: inline-block;
@@ -104,6 +107,105 @@
 	opacity: 0;
 	cursor: pointer;
 }
+.addButton:hover{
+	color: #00cc99;
+}
 .appDesc{
 	transition: opacity 0.25s ease-in-out;
+}
+
+#content>div{
+	transition: opacity 0.5s ease-in-out;
+}
+
+#checkout{
+	/*display: none;*/
+	/*opacity: 0;*/
+	width: 100%;
+	height: 90%;
+}
+#checkout>div{
+	height: 100%;
+	box-sizing: border-box;
+	border:1px solid #00cc99;
+	display: inline-block;
+}
+#selected{
+	width: 30%;
+}
+#selected>p{
+	box-sizing: border-box;
+	position: relative;
+	left: 5%;
+	width: 80%;
+	font-size: 1.5vw;
+}
+li{
+	font-size: 1.5vw;
+	transition: color 0.2s ease-in-out;
+	cursor: pointer;
+}
+li:hover{
+	color: #00cc99;
+}
+#submit{
+	width: 70%;
+}
+
+form{
+	height: 70%;
+	position: relative;
+	top: 15%;
+	font-size: 1.3vw;
+}
+form>span{
+	height: 20%;
+	display: block;
+	margin-left: 10%;
+}
+input{
+	background: transparent;
+}
+input[type=password], input[type=email]{
+  height:30%;
+  width: 50%;
+  border: 0;
+  box-shadow: -8px 10px 0px -7px #ebebeb, 8px 10px 0px -7px #ddd;
+  transition: box-shadow 0.3s ease-in-out;
+  font-size: 1.5vw;
+  color: #00cc99;
+}
+input[type=email]{
+	position: relative;
+	left: 6.5%;
+}
+input[type=password]:focus, input[type=email]:focus{
+  outline: none;
+  box-shadow: -8px 10px 0px -7px #00cc99, 8px 10px 0px -7px #00cc99;
+}
+input[type=submit]{
+	margin-top: 5%;
+	height: 70%;
+	max-height: 50%;
+	width: 20%;
+	max-width: 20%;
+	font-size: 1.3vw;
+	position: relative;
+	left: 30%;
+	transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
+	border: none;
+	border-radius: 10%;
+	background-color: #1cb295;
+	color:white;
+}
+input[type=submit]:hover{
+	color: #00cc99;
+	background-color: #ddd;
+}
+input{
+	margin-left: 5%;
+}
+#dlFormHeader{
+	font-size: 2vw;
+	text-align: center;
 }

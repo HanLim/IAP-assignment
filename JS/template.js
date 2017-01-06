@@ -15,12 +15,6 @@ function spin(reverse){
 	}, 30);
 }
 function toggleSpin(){
-	// var reverse = false;
-	// setInterval(
-	// 	function(){
-	// 		spin(reverse);
-	// 		reverse = !reverse;
-	// 	}, 5000);
 	setTimeout(function(){
         $('#logo').mouseenter(function(){
             spin(false);
@@ -45,16 +39,6 @@ function showAds(){
 	ads.style.display = "inline";
 	content.style.width = "90%";
 	show.style.display = "none";
-}
-
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
 }
 
 function loadTemplate(){
@@ -148,7 +132,7 @@ function changeAds(){
 				name2.style.opacity = 1;
 			}, 2000);
 		},10000);
-	}, 200);
+	}, 1);
 	
 }
 

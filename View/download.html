@@ -14,19 +14,19 @@
             <div id="header"></div>
             <div id="nav"></div>
             <div id="content" class="content-ads">
-                <p class="active">Apps</p><p>Checkout</p>
+                <p class="active" onclick="chooseAppsDiv()" id="toApps">Apps</p><p onclick="checkoutDiv()" id="toCart">Checkout</p>
                 <div id="chooseApps">
                     <div class="categories">
                         <p>Free Apps of the week</p>
                         <div id="freeApps" class="apps" onmouseenter="hover(this)" onmouseleave="unhover(this)">
                             <img src="../Img/spinzer.png">
                             <div class="appDesc">
-                                <p>Spinzer</p>
+                                <p>Spin'zer</p>
                                 <p>Zirai Studio</p>
                                 <p>Rating: 5.0</p>
                             </div>
-                            <div class="addToCart">
-                                <p>Add to Cart.</p>
+                            <div class="addToCart" onclick="addToCart(this)">
+                                <p class="addButton">Add to Cart</p>
                             </div>
                         </div>
                     </div>
@@ -39,8 +39,8 @@
                                 <p>Facebook</p>
                                 <p>Rating: 4.0</p>
                             </div>
-                            <div class="addToCart">
-                                <p>Add to Cart.</p>
+                            <div class="addToCart" onclick="addToCart(this)">
+                                <p class="addButton">Add to Cart</p>
                             </div>
                         </div><!-- 
                      --><div class="apps" onmouseenter="hover(this)" onmouseleave="unhover(this)">
@@ -50,8 +50,8 @@
                                 <p>Whatsapp Inc.</p>
                                 <p>Rating: 4.4</p>
                             </div>
-                            <div class="addToCart">
-                                <p>Add to Cart.</p>
+                            <div class="addToCart" onclick="addToCart(this)">
+                                <p class="addButton">Add to Cart</p>
                             </div>
                          </div><!-- 
                      --><div class="apps" onmouseenter="hover(this)" onmouseleave="unhover(this)">
@@ -61,8 +61,8 @@
                                 <p>Social and Communication</p>
                                 <p>Rating: 4.5</p>
                             </div>
-                            <div class="addToCart">
-                                <p>Add to Cart.</p>
+                            <div class="addToCart" onclick="addToCart(this)">
+                                <p class="addButton">Add to Cart</p>
                             </div>
                          </div><!--  
                      --></div>
@@ -75,8 +75,8 @@
                                 <p>Niantic Inc.</p>
                                 <p>Rating: 4.0</p>
                             </div>
-                            <div class="addToCart">
-                                <p>Add to Cart.</p>
+                            <div class="addToCart" onclick="addToCart(this)">
+                                <p class="addButton">Add to Cart</p>
                             </div>
                         </div><!-- 
                      --><div class="apps" onmouseenter="hover(this)" onmouseleave="unhover(this)">
@@ -86,8 +86,8 @@
                                 <p>Robinson Technologies</p>
                                 <p>Rating: 4.1</p>
                             </div>
-                            <div class="addToCart">
-                                <p>Add to Cart.</p>
+                            <div class="addToCart" onclick="addToCart(this)">
+                                <p class="addButton">Add to Cart</p>
                             </div>
                          </div><!-- 
                      --><div class="apps" onmouseenter="hover(this)" onmouseleave="unhover(this)">
@@ -97,8 +97,8 @@
                                 <p>Roblox Corporation</p>
                                 <p>Rating: 4.3</p>
                             </div>
-                            <div class="addToCart">
-                                <p>Add to Cart.</p>
+                            <div class="addToCart" onclick="addToCart(this)">
+                                <p class="addButton">Add to Cart</p>
                             </div>
                          </div><!--  
                      --></div>
@@ -111,8 +111,8 @@
                                 <p>Supercell</p>
                                 <p>Rating: 4.5</p>
                             </div>
-                            <div class="addToCart">
-                                <p>Add to Cart.</p>
+                            <div class="addToCart" onclick="addToCart(this)">
+                                <p class="addButton">Add to Cart</p>
                             </div>
                         </div><!-- 
                      --><div class="apps" onmouseenter="hover(this)" onmouseleave="unhover(this)">
@@ -122,8 +122,8 @@
                                 <p>Supercell</p>
                                 <p>Rating: 4.6</p>
                             </div>
-                            <div class="addToCart">
-                                <p>Add to Cart.</p>
+                            <div class="addToCart" onclick="addToCart(this)">
+                                <p class="addButton">Add to Cart</p>
                             </div>
                          </div><!-- 
                      --><div class="apps" onmouseenter="hover(this)" onmouseleave="unhover(this)">
@@ -133,20 +133,40 @@
                                 <p>Electronic Arts</p>
                                 <p>Rating: 4.4</p>
                             </div>
-                            <div class="addToCart">
-                                <p>Add to Cart.</p>
+                            <div class="addToCart" onclick="addToCart(this)">
+                                <p class="addButton">Add to Cart</p>
                             </div>
                          </div><!--  
                      --></div>
                 </div>
                 <div id="checkout">
-                    
+                    <div id="selected">
+                        <p>Apps in Cart (click on the app to remove):</p>
+                        <ul id="showSelected"></ul>
+                    </div><!-- 
+                 --><div id="submit">
+                        <p id="dlFormHeader">Please login to continue downloading.</p>
+                        <form name="orderForm" onsubmit="return validateForm(event)" autocomplete="off">
+                            <span>
+                                <label>Email: </label>
+                                <input id="email" type="email" name="gender" placeholder="example@example.com" required="required">
+                            </span>
+                            <span>
+                                <label>Password: </label>
+                                <input id="name" type="password" name="name" placeholder="********" required="required">
+                            </span>
+                            <span>
+                                <input type="submit" name="SUBMIT" id="submit">
+                            </span>
+                        </form>
+                     </div>   
                 </div>
             </div>
-            <div id="ads" class="content-ads" onclick="hideAds()"></div>
+            <div id="ads" class="content-ads"></div>
             <div id="show" onclick="showAds()"></div>
             <div id="footer" onclick='hideFooter(this)'></div>
             <div id="show-footer" onclick="showFooter(this)"></div>
+            <!-- <div class="modal">a</div> -->
         </div>
         <div id="warning"></div>
     </body>

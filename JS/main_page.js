@@ -8,6 +8,22 @@ window.onload = function(){
 	detectOrientation();
 	forceLandscape();
 	detectScreenResize();
+	autoSlide();
+}
+
+function autoSlide(){
+	setTimeout(function(){
+		var counter = 1;
+		setInterval(function(){
+			if(counter < 3){
+				counter++;
+			}
+			else{
+				counter = 1;
+			}
+			document.getElementById('slide'+counter).click();
+		}, 7500);
+	}, 7500);
 }
 
 function slide1(){
@@ -69,7 +85,7 @@ function changeSlide(slideNo){
 	if(currentSlideNo != previousSlideNo){
 		var color;
 		for(var a = 0; a < 3; a++){
-			color = document.getElementsByTagName("label")[a];
+			color = document.getElementsByClassName("toggleSlideButtons")[a];
 			if(a == currentSlideNo - 1){
 				color.style.background = "#00cc99";
 			}

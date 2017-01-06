@@ -14,8 +14,9 @@
 			<div id="header"></div>
 			<div id="nav"></div>
 			<div id="content" class="content-ads">
+			<div id="wrapper">
 				<div class="form_content" id="account_subscription">
-					<form name="orderForm" onsubmit="return validateForm(event)">
+					<form name="orderForm" onsubmit="return validateForm(event)" autocomplete="off" method="post">
 						<span>
 							<label>Name: </label>
 							<input id="name" type="text" name="name" placeholder="Your Name">
@@ -32,6 +33,15 @@
 							<input id="email" type="email" name="gender" placeholder="example@example.com">
 						</span>
 						<span>
+                            <label>Password: </label>
+                            <input id="password" type="password" name="password" placeholder="********">
+                        </span>
+                        <span>
+                            <label>Confirm password: </label>
+                            <input id="confirmPassword
+                            " type="password" name="confirmPassword" placeholder="********">
+                        </span>
+						<span>
 							<label>Subscription Type: </label>
 							<select name="type">
 							  <option value="trial">1 month trial Plan</option>
@@ -47,12 +57,19 @@
 					<p>Get unlimited downloads with premium account.<span></span>
 					Or 1 month trial to enjoy the previlegde of premium account.</p>
 				</div>
+				</div>
 			</div>
-			<div id="ads" class="content-ads" onclick="hideAds()"></div>
+			<div id="ads" class="content-ads"></div>
 			<div id="show" onclick="showAds()"></div>
 			<div id="footer" onclick='hideFooter(this)'></div>
 			<div id="show-footer" onclick="showFooter(this)"></div>
 			<div id="warning"></div>
+			<div class="modal">
+				<div class="modal-content">
+					<p></p>
+					<label id="exit-modal">Confirm</label>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

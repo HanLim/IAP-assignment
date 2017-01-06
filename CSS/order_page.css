@@ -1,17 +1,26 @@
-form{
+#wrapper{
 	background-color: rgba(211,211,211,0.9);
-	height: 100%;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	position: relative;
+	top: 5%;
+	color: black;
+}
+form{
+	height: 80%;
+	padding-top: 5%;
 }
 form>span{
-	height: 20%;
+	height: calc(100%/6);
 	display: block;
 	margin-left: 10%;
 }
 input{
 	background: transparent;
 }
-input[type=text], input[type=email]{
-  height:30%;
+input[type=text], input[type=email], input[type=password]{
+  height:50%;
   width: 50%;
   border: 0;
   box-shadow: -8px 10px 0px -7px #ebebeb, 8px 10px 0px -7px #ddd;
@@ -19,7 +28,7 @@ input[type=text], input[type=email]{
   font-size: 1.5vw;
   color: #00cc99;
 }
-input[type=text]:focus, input[type=email]:focus{
+input[type=text]:focus, input[type=email]:focus, input[type=password]:hover{
   outline: none;
   box-shadow: -8px 10px 0px -7px #00cc99, 8px 10px 0px -7px #00cc99;
 }
@@ -27,9 +36,8 @@ input[type=radio]{
 	display: none;
 }
 input[type=submit]{
-	margin-top: 10px;
-	height: 70%;
-	max-height: 50%;
+	margin-top: 5%;
+	height: 100%;
 	width: 20%;
 	max-width: 20%;
 	font-size: 1.3vw;
@@ -49,7 +57,7 @@ input, select{
 	margin-left: 5%;
 }
 select{
-	font-size: 1.2vw;
+	font-size: 1.1vw;
 	color: #00cc99;
 	border: none;
 	border-radius: 1vw;
@@ -69,24 +77,25 @@ select{
 }
 #account_desc{
 	text-align: center;
-	font-size: 2vw;
+	font-size: 1.5vw;
 	border-left: 3px #00cc99 dashed;
 }
 #account_desc>p{
 	margin-top: 10%;
+	position: relative;
+	left: 5%;
 }
 p>span{
 	display: block;
 	margin-top: 3%;
 }
-span>label:not(.gender){
-	font-size: 2vw;
+span>label{
+	font-size: 1.2vw;
 }
 
 .gender{
-	font-size: 1.5vw;
 	margin-left: 3%;
-	transition: color 2s ease-in-out, background 1s ease-in-out;
+	transition: color 0.3s ease-in-out, background 1s ease-in-out;
 }
 
 .gender.active{
