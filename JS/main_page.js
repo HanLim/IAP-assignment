@@ -22,8 +22,8 @@ function autoSlide(){
 				counter = 1;
 			}
 			document.getElementById('slide'+counter).click();
-		}, 7500);
-	}, 7500);
+		}, 10000);
+	}, 10000);
 }
 
 function slide1(){

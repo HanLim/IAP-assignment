@@ -53,20 +53,22 @@ function chooseAppsDiv(){
 }
 
 var inCart = [];
-function addToCart(div){
-    div.style.color = '#00cc99';
-    div.innerHTML = '<p>ADDED</p>';
-    var newElement = div.parentElement.children[1].children[0].innerHTML,
-        repeated = false;
-    for(var a = 0; a < inCart.length; a++){
-        if (inCart[a] == newElement){
-            repeated = true;
+function addToCart(div, changeColor){
+    if(changeColor){
+        div.style.color = '#00cc99';
+        div.innerHTML = '<p>ADDED</p>';
+        var newElement = div.parentElement.children[1].children[0].innerHTML,
+            repeated = false;
+        for(var a = 0; a < inCart.length; a++){
+            if (inCart[a] == newElement){
+                repeated = true;
+            }
         }
+        if(!repeated){
+            inCart.push(newElement);
+        }
+        printChosen();
     }
-    if(!repeated){
-        inCart.push(newElement);
-    }
-    printChosen();
 }
 
 function removeApps(app){
@@ -90,5 +92,39 @@ function printChosen(){
     document.getElementById('showSelected').innerHTML = "";
     for(var a = 0; a < inCart.length; a++){
         document.getElementById('showSelected').innerHTML += '<li onclick="removeApps(this)" id="chosen"'+ a +'>'+inCart[a]+'</li>';
+    }
+}
+
+function validateForm(event){
+    var email = document.forms["orderForm"]["email"].value;
+    var password = document.forms["orderForm"]["password"].value;
+    var validEmail = true,
+        validPassword = true,
+        appsSelected = true;
+
+    if(!/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(email)){
+        document.getElementById('email').value = '';
+        document.getElementById('email').placeholder = 'Invalid email';
+        document.getElementById('email').classList.toggle('invalid');
+        validEmail = false;
+    }
+    if(password.length < 6 || password.length > 9){
+        document.getElementById('password').value = '';
+        document.getElementById('password').placeholder = '6-8 alphanumeric char only';
+        document.getElementById('password').classList.toggle('invalid');
+        validPassword = false;
+    }
+    if(inCart.length <= 0){
+        document.getElementById('listHeader').style.color = 'red';
+        appsSelected = false;
+    }
+    else{
+        document.getElementById('listHeader').style.color = 'white';
+    }
+    if(!validEmail || !validPassword || inCart.length <= 0){
+        return false;
+    }
+    else{
+        return true;
     }
 }

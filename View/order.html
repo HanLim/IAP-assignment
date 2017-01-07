@@ -16,13 +16,13 @@
 			<div id="content" class="content-ads">
 			<div id="wrapper">
 				<div class="form_content" id="account_subscription">
-					<form name="orderForm" onsubmit="return validateForm(event)" autocomplete="off" method="post">
+					<form name="orderForm" onsubmit="return validateForm(event)" autocomplete="off" method="get">
 						<span>
 							<label>Name: </label>
 							<input id="name" type="text" name="name" placeholder="Your Name">
 						</span>
 						<span>
-							<label>Gender: </label>
+							<label id="gender">Gender: </label>
 							<label class="gender" for="male" onclick="color(this)" id="maleLabel">Male</label>
 							<input type="radio" name="gender" value="male" id="male">
 							<label class="gender" for="female" onclick="color(this)" id="femaleLabel">Female</label>
@@ -38,8 +38,7 @@
                         </span>
                         <span>
                             <label>Confirm password: </label>
-                            <input id="confirmPassword
-                            " type="password" name="confirmPassword" placeholder="********">
+                            <input id="confirmPassword" type="password" name="confirmPassword" placeholder="********">
                         </span>
 						<span>
 							<label>Subscription Type: </label>
@@ -54,8 +53,15 @@
 					</form>
 				</div>
 				<div class="form_content" id="account_desc">
-					<p>Get unlimited downloads with premium account.<span></span>
-					Or 1 month trial to enjoy the previlegde of premium account.</p>
+					<p>
+						Get unlimited downloads with premium account.
+					</p>
+					<p>
+						Or 1 month trial to enjoy the previlegde of premium account.
+					</p>
+					<p>
+						Confirmation email will be sent after the registration to inform about payment method
+					</p>
 				</div>
 				</div>
 			</div>
@@ -64,12 +70,6 @@
 			<div id="footer" onclick='hideFooter(this)'></div>
 			<div id="show-footer" onclick="showFooter(this)"></div>
 			<div id="warning"></div>
-			<div class="modal">
-				<div class="modal-content">
-					<p></p>
-					<label id="exit-modal">Confirm</label>
-				</div>
-			</div>
 		</div>
 	</body>
 </html>

@@ -61,7 +61,6 @@
 	width: 100%;
 	height: 95%;
 	overflow-y: scroll;
-	display: none;
 }
 .categories{
 	height: 30%;
@@ -107,7 +106,7 @@
 	opacity: 0;
 	cursor: pointer;
 }
-.addButton:hover{
+.addButton:hover, .download:hover{
 	color: #00cc99;
 }
 .appDesc{
@@ -119,8 +118,8 @@
 }
 
 #checkout{
-	/*display: none;*/
-	/*opacity: 0;*/
+	display: none;
+	opacity: 0;
 	width: 100%;
 	height: 90%;
 }
@@ -151,9 +150,14 @@ li:hover{
 #submit{
 	width: 70%;
 }
-
+.invalid::-webkit-input-placeholder{
+	color: red;
+}
+::-webkit-input-placeholder{
+	transition: color 1s ease-in-out;
+}
 form{
-	height: 70%;
+	height: 50%;
 	position: relative;
 	top: 15%;
 	font-size: 1.3vw;
@@ -205,7 +209,15 @@ input[type=submit]:hover{
 input{
 	margin-left: 5%;
 }
-#dlFormHeader{
+#dlFormHeader1{
 	font-size: 2vw;
+	text-align: center;
+}
+#dlFormHeader2{
+	font-size: 1.5vw;
+	text-align: center;
+}
+#dlFormHeader3{
+	font-size: 1.5vw;
 	text-align: center;
 }

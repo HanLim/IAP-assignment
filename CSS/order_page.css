@@ -7,6 +7,18 @@
 	top: 5%;
 	color: black;
 }
+#password{
+	position: relative;
+	left: 19%;	
+}
+#email{
+	position: relative;
+	left: 29.5%;
+}
+#name{
+	position: relative;
+	left: 29.5%;
+}
 form{
 	height: 80%;
 	padding-top: 5%;
@@ -49,6 +61,16 @@ input[type=submit]{
 	background-color: #1cb295;
 	color:white;
 }
+.invalid::-webkit-input-placeholder{
+	color: red;
+}
+::-webkit-input-placeholder{
+	transition: color 0.25s ease-in-out;
+	font-size: 1.2vw;
+}
+#gender{
+	transition: color 0.25s ease-in-out;
+}
 input[type=submit]:hover{
 	color: #00cc99;
 	background-color: #ddd;
@@ -62,6 +84,8 @@ select{
 	border: none;
 	border-radius: 1vw;
 	background-color: #ddd;
+	position: relative;
+	left: 1.5%;
 }
 .form_content{
 	display: inline-block;
@@ -85,15 +109,13 @@ select{
 	position: relative;
 	left: 5%;
 }
-p>span{
-	display: block;
-	margin-top: 3%;
-}
 span>label{
 	font-size: 1.2vw;
 }
 
 .gender{
+	position: relative;
+	left: 26%;
 	margin-left: 3%;
 	transition: color 0.3s ease-in-out, background 1s ease-in-out;
 }
