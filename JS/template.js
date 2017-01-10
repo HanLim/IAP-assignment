@@ -101,10 +101,10 @@ function changeAds(){
 	], num1, num2;
 	
 	setTimeout(function(){
-		var img1 = document.getElementsByClassName('ads-img')[0],
-			img2 = document.getElementsByClassName('ads-img')[1],
-			name1 = document.getElementsByClassName('ads-name')[0],
-			name2 = document.getElementsByClassName('ads-name')[1];
+		var img1 = document.getElementById('ads-img1'),
+			img2 = document.getElementById('ads-img2'),
+			name1 = document.getElementById('ads-name1'),
+			name2 = document.getElementById('ads-name2');
 
 		setInterval(function(){
 			num1 = Math.floor(Math.random() * 5);
@@ -132,14 +132,17 @@ function changeAds(){
 				name2.style.opacity = 1;
 			}, 2000);
 		},10000);
-	}, 1);
+	}, 1000);
 	
 }
 
 function initialize(){
 	loadTemplate();
 	toggleSpin();
-	changeAds();
+	setTimeout(function(){
+		changeAds();
+	}, 1000);
+	
 	detectOrientation();
 	detectScreenResize();
 	forceLandscape();
@@ -210,4 +213,7 @@ function forceLandscape(){
  			},1);
  		}
 	}
+}
+function redirectDownload(){
+	location.replace('download.html');
 }

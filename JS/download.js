@@ -83,6 +83,7 @@ function removeApps(app){
         if (paragraph[a].textContent == app.innerHTML){
             paragraph[a].parentNode.parentNode.children[2].innerHTML = '<p class="addButton">ADD TO CART</p>';
             paragraph[a].parentNode.parentNode.children[2].style.color = 'white';
+            break;
         }
     }
     printChosen();

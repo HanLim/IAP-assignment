@@ -1,0 +1,41 @@
+#content{
+	overflow: scroll;
+	font-size: 1.2vw;
+	text-align: center;
+}
+#content>img{
+	max-width: 50%;
+}
+#content:hover::-webkit-scrollbar{
+	display: block;
+	opacity: 1;
+	border-radius: 1vw;	
+	width:10px;
+}
+
+#content::-webkit-scrollbar-thumb {
+    border-radius: 1vw;
+    background: #ddd;
+}
+#content::-webkit-scrollbar{
+	display: none;
+	opacity: 0;
+}
+table{
+	width: 80%;
+	margin: 0 auto;
+	border-radius: 1vw;
+	border: none;
+}
+th{
+	background-color: #ddd;
+	font-size: 1.5vw;
+	color: black;
+	border-radius: 1vw;
+}
+td{
+	background-color: rgba(211,211,211,0.5);
+	font-size: 1.5vw;
+	color: black;
+	border-radius: 1vw;
+}

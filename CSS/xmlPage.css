@@ -3,8 +3,8 @@
 	width: 100%;
 }
 #content{
-	text-align: center;
-
+	text-justify: inter-word;
+	text-align: justify;
 }
 table{
 	height: 70%;

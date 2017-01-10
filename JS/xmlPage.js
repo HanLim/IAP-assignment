@@ -7,7 +7,7 @@ function loadXMLDoc(filename){
     }
     xhttp.open("GET", filename, false);
     try{
-        xhttp.responseType = "msxml-document"
+        xhttp.responseType = "msxml-document";
     } 
     catch(err){}
     xhttp.send("");
@@ -31,5 +31,8 @@ function displayResult(){
 
 window.onload = function(){
     initialize();
-    setActiveNav(1);    
+    setActiveNav(1);
+    setTimeout(function(){
+        displayResult();
+    }, 1);
 }
